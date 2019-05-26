@@ -6,7 +6,8 @@ theme: /Chuck Norris Joke
     script:
       $temp.joke = ChuckNorrisJoke.random()
     if: $temp.joke
-      Aimybox.question().text($temp.joke).button("Tell another one")
+      script:
+        Aimybox.question().text($temp.joke).button("Tell another one")
     else:
       a: Sorry, Chuck Norris is busy now...
 
